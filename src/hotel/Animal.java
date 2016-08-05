@@ -15,11 +15,11 @@ public class Animal {
 
 	private void chacarInfoAnimal(String nome, String tipo, int idade) throws Exception {
 		if (nome == null || nome.trim().equalsIgnoreCase("")) {
-			throw new Exception("Nome nulo ou vazio.");
+			throw new Exception("Nome de um animal nao pode ser nulo ou vazio");
 		} else if (tipo == null || tipo.trim().equalsIgnoreCase("")) {
-			throw new Exception("Tipo nulo ou vazio.");
-		} else if (idade <= 0) {
-			throw new Exception("Idade menor ou igual a zero.");
+			throw new Exception("Tipo de um animal nao pode ser nulo ou vazio");
+		} else if (idade < 0) {
+			throw new Exception("Idade de um animal nao pode ser abaixo de 0");
 		}
 		return;
 	}
@@ -39,7 +39,7 @@ public class Animal {
 		if (cliente instanceof Animal) {
 			Animal animal = (Animal) cliente;
 			if (this.getNome().equalsIgnoreCase(animal.getNome())
-					&& this.getTipo().equalsIgnoreCase(animal.getTipo())) {
+				&& this.getTipo().equalsIgnoreCase(animal.getTipo())) {
 				return true;
 			}
 		}
