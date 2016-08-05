@@ -35,16 +35,20 @@ public class Estadia {
 
 	@Override
 	public String toString() {
-		return String.format("%s, %s, %d dias com o preço de R$ %.2f", this.getAnimal().getNome(),
-				this.getAnimal().getTipo(), this.getDias(), this.getValor());
+		return String.format("%s, %s, %d dias com o preço de R$ %.2f", this.getNome(),
+				this.getTipo(), this.getDias(), this.getValor());
 	}
 
-	public Animal getAnimal() {
-		return animal;
+	public String getNome() {
+		return animal.getNome();
 	}
 
-	public void setAnimal(Animal animal) {
-		this.animal = animal;
+	public String getTipo() {
+		return animal.getTipo();
+	}
+
+	public int getIdade() {
+		return animal.getIdade();
 	}
 
 	public double getValor() {
