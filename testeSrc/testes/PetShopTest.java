@@ -8,6 +8,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import hotel.Animal;
+import hotel.Estadia;
+import hotel.Recepcao;
 
 public class PetShopTest {
 
@@ -26,7 +29,7 @@ public class PetShopTest {
 			Animal toto = new Animal("Toto", "Cachorro", 3);
 			
 			assertEquals(paola.getTipo(), "Cobra");
-			assertEquals(freddie.getNome(), "Freddie");
+			assertEquals(frederico.getNome(), "Frederico Mercury");
 			assertNotEquals(toto.getIdade(), 5000);
 			
 			Animal gabriel = new Animal("Gabriel", "Gato", 18);
